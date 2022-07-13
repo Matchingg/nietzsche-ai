@@ -27,6 +27,7 @@ body {
 }
 
 .text_input {
+  font-family: cursive;
   width: 30%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -34,9 +35,11 @@ body {
 }
 
 .button {
+  font-family: cursive;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.912);
 }
 
 .result {
