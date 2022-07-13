@@ -1,0 +1,45 @@
+* {
+  font-family: "Dancing Script", cursive;
+  font-family: "Lato", sans-serif;
+  font-family: "Quicksand", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  text-align: center;
+}
+
+.text_input {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.button {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.result {
+  padding-left: 10%;
+  padding-right: 10%;
+  animation: fadeIn 2s;
+  font-family: cursive;
+  font-size: x-large;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
