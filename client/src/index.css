@@ -1,7 +1,17 @@
 * {
   font-family: "Dancing Script", cursive;
   font-family: "Lato", sans-serif;
-  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("../public/nietzsche-wallpaper.jpg");
+  background-size: cover;
+  background-color: #fff;
+  background-blend-mode: luminosity;
 }
 
 .container {
@@ -12,6 +22,8 @@
 
 .heading {
   text-align: center;
+  font-family: cursive;
+  font-size: xxx-large;
 }
 
 .text_input {

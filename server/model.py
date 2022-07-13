@@ -44,7 +44,7 @@ def hello():
             generated_text = ''.join(i for i in generated_text if not i.isdigit())
             return generated_text
 
-        generated_text = generate_text(model, num_generate=500, temperature=1, start_string='Plato')
+        generated_text = generate_text(model, num_generate=500, temperature=1, start_string='Knowledge is')
         return json.dumps(generated_text)
 
 if __name__ == "__main__":
