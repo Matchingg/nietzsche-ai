@@ -1,6 +1,5 @@
 * {
-  font-family: "Dancing Script", cursive;
-  font-family: "Lato", sans-serif;
+  font-family: "Playfair Display", serif;
 }
 
 body {
@@ -22,12 +21,12 @@ body {
 
 .heading {
   text-align: center;
-  font-family: cursive;
+  font-family: serif;
   font-size: xxx-large;
 }
 
 .text_input {
-  font-family: cursive;
+  font-family: serif;
   width: 30%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -35,7 +34,7 @@ body {
 }
 
 .button {
-  font-family: cursive;
+  font-family: serif;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -46,7 +45,8 @@ body {
   padding-left: 10%;
   padding-right: 10%;
   animation: fadeIn 2s;
-  font-family: cursive;
+  font-family: serif;
+  font-style: italic;
   font-size: x-large;
 }
 
