@@ -17,11 +17,19 @@ const App = () => {
   const handlePredictClick = (event) => {
     setIsLoading(true);
     axios
-      .post("/completion", {
-        string: data,
-      })
+      .post(
+        "/completion",
+        {
+          string: data,
+        },
+        { timeout: 5000 }
+      )
       .then((res) => {
         setResult(res.data);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setResult("Nietzsche AI needs rest too! Try again later :(");
         setIsLoading(false);
       });
   };

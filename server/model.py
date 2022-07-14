@@ -1,4 +1,3 @@
-from crypt import methods
 import tensorflow as tf
 from flask import Flask, request
 import numpy as np
@@ -12,7 +11,6 @@ app = Flask(__name__)
 def hello():
     if request.method == 'POST':
         start_string = request.json['string']
-        print(start_string)
         directory = os.getcwd()
         fileName = os.path.join(directory, './server/model.pkl')
         model = pickle.load(open(fileName, 'rb'))
@@ -24,7 +22,6 @@ def hello():
         vocab = sorted(set(text))
         char2idx = {u:i for i, u in enumerate(vocab)}
         idx2char = np.array(vocab)
-        text_as_int = np.array([char2idx[c] for c in text])
 
         def generate_text(model, num_generate, temperature, start_string):
             input_eval = [char2idx[s] for s in start_string]
