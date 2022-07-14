@@ -11,6 +11,8 @@ app = Flask(__name__)
 @app.route('/completion', methods=['POST'])
 def hello():
     if request.method == 'POST':
+        start_string = request.json['string']
+        print(start_string)
         directory = os.getcwd()
         fileName = os.path.join(directory, './server/model.pkl')
         model = pickle.load(open(fileName, 'rb'))
@@ -44,7 +46,7 @@ def hello():
             generated_text = ''.join(i for i in generated_text if not i.isdigit())
             return generated_text
 
-        generated_text = generate_text(model, num_generate=500, temperature=1, start_string='Knowledge is')
+        generated_text = generate_text(model, num_generate=500, temperature=1, start_string=start_string)
         return json.dumps(generated_text)
 
 if __name__ == "__main__":

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const App = () => {
   const instructions =
@@ -15,12 +16,12 @@ const App = () => {
 
   const handlePredictClick = (event) => {
     setIsLoading(true);
-    fetch("/completion", {
-      method: "POST",
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setResult(data);
+    axios
+      .post("/completion", {
+        string: data,
+      })
+      .then((res) => {
+        setResult(res.data);
         setIsLoading(false);
       });
   };
@@ -41,7 +42,7 @@ const App = () => {
           className="text_input"
         />
         <button
-          disabled={isLoading}
+          disabled={isLoading || !data}
           onClick={!isLoading ? () => handlePredictClick() : null}
           className="button"
         >
