@@ -18,7 +18,7 @@ const App = () => {
     setIsLoading(true);
     axios
       .post(
-        "https://nietzsche-ai.herokuapp.com/completion",
+        "https://nietzsche-ai.herokuapp.com",
         {
           string: data,
         },
