@@ -4,8 +4,10 @@ import numpy as np
 import pickle
 import os
 import json
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/completion', methods=['POST'])
 def hello():
