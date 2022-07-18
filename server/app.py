@@ -47,7 +47,6 @@ def hello():
 
         generated_text = generate_text(model, num_generate=500, temperature=1, start_string=start_string)
         response = json.dumps(generated_text)
-        response.headers.add('Access-Control-Allow-Origin', '*')
         return response
 
 if __name__ == "__main__":
