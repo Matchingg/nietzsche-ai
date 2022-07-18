@@ -13,6 +13,13 @@ body {
   background-blend-mode: luminosity;
 }
 
+@media only screen and (max-width: 1400px) {
+  body {
+    background-color: #c7c7c7;
+    background-image: none;
+  }
+}
+
 .container {
   display: flex;
   justify-content: center;
